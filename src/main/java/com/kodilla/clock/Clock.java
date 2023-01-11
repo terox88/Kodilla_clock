@@ -1,6 +1,7 @@
 package com.kodilla.clock;
 
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class Clock {
     private LocalTime time;
@@ -25,6 +26,7 @@ public class Clock {
 
     @Override
     public String toString() {
-        return "Clock number " + clockNumber + " shows time: " + time;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH mm ss");
+        return "Clock number " + clockNumber + " shows time: " + time.format(formatter);
     }
 }

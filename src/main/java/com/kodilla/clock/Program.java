@@ -1,5 +1,6 @@
 package com.kodilla.clock;
 
+import java.time.LocalTime;
 import java.util.*;
 
 public class Program {
@@ -11,6 +12,7 @@ public class Program {
         Clock clock5 = new Clock(15, 24, 55);
         Clock clock6 = new Clock(4, 24, 55);
         Clock clock7 = new Clock(2, 24, 55);
+        clock7.setTime(LocalTime.now());
         List<Clock> clockList = new LinkedList<>();
 
         clockList.add(clock1);
